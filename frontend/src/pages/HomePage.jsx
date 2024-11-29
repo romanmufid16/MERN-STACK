@@ -17,6 +17,18 @@ const HomePage = () => {
     }
   }
 
+  const handleDelete = async (id) => {
+    const confirmed = window.confirm('Are you sure you want to delete?');
+    if (confirmed) {
+      try {
+        await axiosProduct.delete(`/${id}`);
+        fetchData();
+      } catch (error) {
+        console.error(error.message)
+      }
+    }
+  }
+
   useEffect(() => {
     setTimeout(() => {
       fetchData();
@@ -36,6 +48,8 @@ const HomePage = () => {
               productName={item.name}
               price={`${item.price}`}
               id={item._id}
+              image={item.image}
+              onDelete={() => handleDelete(item._id)}
             />
           ))}
         </div>
