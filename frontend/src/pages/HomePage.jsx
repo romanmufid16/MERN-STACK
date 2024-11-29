@@ -30,9 +30,7 @@ const HomePage = () => {
   }
 
   useEffect(() => {
-    setTimeout(() => {
-      fetchData();
-    }, 1000)
+    fetchData();
   }, []);
 
   return (

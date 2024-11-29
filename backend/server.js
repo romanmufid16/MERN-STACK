@@ -8,9 +8,7 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors({
-	origin: 'https://mern-stack-three-theta.vercel.app',
-}));
+app.use(cors());
 const PORT = process.env.PORT || 5000;
 
 const __dirname = path.resolve();
