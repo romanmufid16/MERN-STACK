@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development nodemon backend/server.js",
-    "build": "npm install && cd frontend && npm install && npm run build",
+    "build": "npm install && cd frontend && npm install -g vite && npm run build",
     "start": "NODE_ENV=production node backend/server.js",
     "vercel-build": "npm run build"
   },
