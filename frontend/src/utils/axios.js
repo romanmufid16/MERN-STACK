@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const axiosProduct = axios.create({
-  baseURL: "http://localhost:5000/api/products"
+  baseURL: "https://product-mern-three.vercel.app/api/products"
 });
